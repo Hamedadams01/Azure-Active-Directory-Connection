@@ -1,6 +1,6 @@
 # Azure AD Connect
 
-Overview
+## Overview
 
 In this home lab, I demonstrate how to configure **Azure AD Connect** to synchronize an on-premises Active Directory environment with Microsoft Entra ID (Azure AD). This setup creates a hybrid identity environment, allowing users to access both on-prem and cloud resources with the same credentials. It reflects a real-world enterprise scenario where organizations integrate their local infrastructure with cloud services like Microsoft 365.
 
@@ -24,21 +24,23 @@ I added an **alternative UPN suffix** in Active Directory to match my Microsoft 
 Adding a UPN suffix that matches the Microsoft 365 tenant allows users to have a valid login identity for cloud services.
 ----
 
-![image alt]()
+![image alt](https://github.com/Hamedadams01/Axure-Active-Directory-Connection/blob/e2165560b9bf8931b8b62f540e383ca73829f3cd/Screenshot_2026-04-17_064943.webp)
 
 The Microsoft 365 tenant domain houtech272.onmicrosoft.com is being added so that on-premises user accounts can be assigned this suffix. This makes their usernames match the cloud domain, which is required for proper synchronization and SSO to work.
 
-![image alt]()
+![image alt](https://github.com/Hamedadams01/Axure-Active-Directory-Connection/blob/e2165560b9bf8931b8b62f540e383ca73829f3cd/Screenshot_2026-04-17_064957.webp)
 
 After adding the new UPN suffix, each user account (starting with the Admin account) needs to be updated to use the new cloud-routable domain suffix. This ensures the account will sync correctly to Microsoft Entra ID and the user can sign in using their Microsoft 365 credentials.
 
-![image alt]()
+![image alt](https://github.com/Hamedadams01/Axure-Active-Directory-Connection/blob/e2165560b9bf8931b8b62f540e383ca73829f3cd/Screenshot_2026-04-17_065053.webp)
 Azure AD Connect needs to authenticate with your Microsoft 365 tenant in the cloud. You must provide Global Administrator credentials so the tool has permission to create the sync connection and write user objects to Entra ID
 
-![image alt]()
-
+![image alt](https://github.com/Hamedadams01/Axure-Active-Directory-Connection/blob/e2165560b9bf8931b8b62f540e383ca73829f3cd/Screenshot_2026-04-17_065229.webp)
+![image alt](https://github.com/Hamedadams01/Axure-Active-Directory-Connection/blob/e2165560b9bf8931b8b62f540e383ca73829f3cd/Screenshot_2026-04-15_140644.webp)
+![image alt](https://github.com/Hamedadams01/Axure-Active-Directory-Connection/blob/e2165560b9bf8931b8b62f540e383ca73829f3cd/Screenshot_2026-04-15_141419.webp)
 This confirms that the sync worked and on-premises AD accounts have been created in the cloud.
 
-![image alt]()
+
+![image alt](https://github.com/Hamedadams01/Axure-Active-Directory-Connection/blob/e2165560b9bf8931b8b62f540e383ca73829f3cd/Screenshot_2026-04-15_140141.webp)
 This confirms that not just user accounts, but also AD security groups have been successfully synced to the cloud. 
 ![image alt]()
