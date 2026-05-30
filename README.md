@@ -1,16 +1,28 @@
-Azure AD Connect
+# Azure AD Connect
+
 Overview
-In this home lab, I demonstrate how to configure Azure AD Connect to synchronize an on-premises Active Directory environment with Microsoft Entra ID (Azure AD). This setup creates a hybrid identity environment, allowing users to access both on-prem and cloud resources with the same credentials. It reflects a real-world enterprise scenario where organizations integrate their local infrastructure with cloud services like Microsoft 365.
-Objectives
-Configure an alternative UPN suffix in Active Directory
-Prepare on-prem accounts for cloud synchronization
-Connect on-prem Active Directory to Microsoft Entra ID
-Synchronize users and groups to the cloud
-Validate successful hybrid identity integration
-Documentation (Step-by-Step with Purpose)
-Azure AD Connect 1
-I added an alternative UPN suffix in Active Directory to match my Microsoft 365 domain.
+
+In this home lab, I demonstrate how to configure **Azure AD Connect** to synchronize an on-premises Active Directory environment with Microsoft Entra ID (Azure AD). This setup creates a hybrid identity environment, allowing users to access both on-prem and cloud resources with the same credentials. It reflects a real-world enterprise scenario where organizations integrate their local infrastructure with cloud services like Microsoft 365.
+
+---
+
+## **Objectives**
+
+- Configure an alternative UPN suffix in Active Directory
+- Prepare on-prem accounts for cloud synchronization
+- Connect on-prem Active Directory to Microsoft Entra ID
+- Synchronize users and groups to the cloud
+- Validate successful hybrid identity integration
+
+---
+
+## **Documentation (Step-by-Step with Purpose)**
+
+### **Azure AD Connect 1**
+
+I added an **alternative UPN suffix** in Active Directory to match my Microsoft 365 domain.
 Adding a UPN suffix that matches the Microsoft 365 tenant allows users to have a valid login identity for cloud services.
+----
 
 ![image alt]()
 
